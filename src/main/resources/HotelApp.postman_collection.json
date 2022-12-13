@@ -475,6 +475,25 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "CSV Bulk Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/jobs/bulkData",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"jobs",
+						"bulkData"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
