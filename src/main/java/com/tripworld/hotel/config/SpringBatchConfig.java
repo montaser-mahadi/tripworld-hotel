@@ -139,8 +139,8 @@ public class SpringBatchConfig {
     @Bean
     public Job runJob() throws Exception {
         return jobBuilderFactory.get("bulkData")
-                .start(step2())
-                .next(step1())
+                .start(step1())
+                .next(step2())
                 .build();
     }
 /*
@@ -148,7 +148,7 @@ public class SpringBatchConfig {
     @Bean
     public Job runJob() {
         return jobBuilderFactory.get("bulkData")
-                .flow(step2()).end().build();
+                .flow(step1()).end().build();
 
     }*/
 
