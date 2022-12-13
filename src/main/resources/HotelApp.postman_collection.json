@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "aee74986-71d5-4010-bfe0-081788f4bcfc",
+		"name": "HotelApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Amenity Requests",
+			"item": [
+				{
+					"name": "Create Amenity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shortDescription\": \"Laptopsafe\",\r\n    \"description\": \"Laptop safe Stand\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/amenity/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"amenity",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Amenity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/amenity/search?query=package",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"amenity",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "package"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Amenity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/amenity/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"amenity",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hotel Requests",
+			"item": [
+				{
+					"name": "Search Hotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/hotel/search?hotelName=ATANA HOTEL",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"hotel",
+								"search"
+							],
+							"query": [
+								{
+									"key": "hotelName",
+									"value": "ATANA HOTEL"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotelName\":\"CANON HOTEL\",\r\n    \"description\": \"The hotel features 828 beautifully appointed guest rooms, many of which include television LCD/plasma screen, bathroom phone, carpeting, linens, mirror. The hotel offers an excellent variety of recreational facilities, including fitness center, sauna, outdoor pool, spa, massage. When you are looking for comfortable and convenient accommodations in Dubai, make Atana Hotel your home away from home\",\r\n    \"cityCode\":\"A H\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/hotel/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"hotel",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hotel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/hotel/delete/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"hotel",
+								"delete",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room Requests",
+			"item": [
+				{
+					"name": "Create Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"5 King Bed,1 Double Bed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/room/create/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"room",
+								"create",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/room/search/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"room",
+								"search",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Room",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/room/delete/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"room",
+								"delete",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room Amenity Requets",
+			"item": [
+				{
+					"name": "Create  Room Amenity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomId\":14,\r\n    \"amenityId\":11,\r\n    \"chargeable\":true,\r\n    \"amount\":520\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/roomAmenity/create/14/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"roomAmenity",
+								"create",
+								"14",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Room Amenity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomAmenityId\":15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/roomAmenity/search/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"roomAmenity",
+								"search",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Room Amenity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomAmenityId\":14,\r\n    \"roomId\":14,\r\n    \"amenityId\":11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/roomAmenity/delete/15/14/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"roomAmenity",
+								"delete",
+								"15",
+								"14",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hotel Amenity Requests",
+			"item": [
+				{
+					"name": "Create Hotel Amenity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotelId\":5,\r\n    \"amenityId\":8,\r\n    \"chargeable\":true,\r\n    \"amount\": 2120\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/hotelAmenity/create/5/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"hotelAmenity",
+								"create",
+								"5",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Hotel Amenity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/hotelAmenity/search/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"hotelAmenity",
+								"search",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hotel Amenity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/hotelAmenity/delete/17/5/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"hotelAmenity",
+								"delete",
+								"17",
+								"5",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
